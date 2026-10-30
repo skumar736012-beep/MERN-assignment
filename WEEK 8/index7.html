@@ -24,10 +24,12 @@
             margin-bottom: 25px;
         }
 
-        /* Question 8.1 - CSS Grid */
+    
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
             gap: 20px;
             padding: 20px;
         }
@@ -46,9 +48,8 @@
 
 <body>
 
-    <h1>My CSS Grid Layout</h1>
+    <h1>My Responsive CSS Grid</h1>
 
-    <!-- Question 8.1 -->
     <div class="grid-container">
 
         <div class="grid-box">Box 1</div>
