@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 8 - CSS Grid Layout</title>
+    <title>Week 8 - CSS Grid</title>
 
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: darkblue;
-            margin-bottom: 20px;
         }
 
         /* Question 8.3 - Grid Template Areas */
@@ -33,53 +24,62 @@
                 "side main"
                 "foot foot";
             gap: 15px;
+            padding: 15px;
         }
 
         .head {
             grid-area: head;
-            background-color: darkblue;
-            color: white;
-            padding: 25px;
+            background-color: #dbeafe;
+            padding: 20px;
             text-align: center;
         }
 
         .side {
             grid-area: side;
-            background-color: lightblue;
-            padding: 25px;
+            background-color: #fef3c7;
+            padding: 20px;
         }
 
         .main {
             grid-area: main;
-            background-color: white;
-            padding: 25px;
+            background-color: #f3f4f6;
+            padding: 20px;
         }
 
         .foot {
             grid-area: foot;
-            background-color: darkblue;
-            color: white;
+            background-color: #dcfce7;
             padding: 20px;
             text-align: center;
         }
 
-        /* Question 8.1 and 8.2 - Responsive Grid */
+        /* Questions 8.1 and 8.2 - Responsive CSS Grid */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
-            margin-top: 20px;
+            padding: 15px;
         }
 
         .grid-box {
-            background-color: lightblue;
-            border: 2px solid darkblue;
-            border-radius: 10px;
-            padding: 30px 15px;
-            text-align: center;
+            background-color: #e0e7ff;
+            border: 1px solid #6366f1;
+            border-radius: 8px;
+            padding: 20px;
             font-weight: bold;
+
+            /* Question 8.4 - Flexbox inside Grid */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
         }
 
+        .grid-icon {
+            font-size: 28px;
+        }
+
+        /* Responsive layout for mobile */
         @media screen and (max-width: 600px) {
             .page-layout {
                 grid-template-columns: 1fr;
@@ -95,40 +95,57 @@
 
 <body>
 
-    <h1>My CSS Grid Layout</h1>
-
-    <!-- Question 8.3 -->
     <div class="page-layout">
 
         <header class="head">
-            <h2>My Portfolio Header</h2>
+            <h1>My Learning Dashboard</h1>
         </header>
 
         <aside class="side">
             <h2>Sidebar</h2>
-            <p>Home</p>
-            <p>About</p>
-            <p>Skills</p>
-            <p>Contact</p>
+            <p>Welcome to my CSS Grid project.</p>
         </aside>
 
         <main class="main">
-            <h2>Main Content</h2>
-            <p>Welcome to my responsive CSS Grid page.</p>
+            <h2>My Technical Skills</h2>
 
-            <!-- Questions 8.1 and 8.2 -->
             <div class="grid-container">
-                <div class="grid-box">Box 1</div>
-                <div class="grid-box">Box 2</div>
-                <div class="grid-box">Box 3</div>
-                <div class="grid-box">Box 4</div>
-                <div class="grid-box">Box 5</div>
-                <div class="grid-box">Box 6</div>
+
+                <div class="grid-box">
+                    <span class="grid-icon">💻</span>
+                    <span>HTML</span>
+                </div>
+
+                <div class="grid-box">
+                    <span class="grid-icon">🎨</span>
+                    <span>CSS</span>
+                </div>
+
+                <div class="grid-box">
+                    <span class="grid-icon">⚡</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="grid-box">
+                    <span class="grid-icon">☕</span>
+                    <span>Java</span>
+                </div>
+
+                <div class="grid-box">
+                    <span class="grid-icon">🧠</span>
+                    <span>DSA</span>
+                </div>
+
+                <div class="grid-box">
+                    <span class="grid-icon">🤖</span>
+                    <span>Artificial Intelligence</span>
+                </div>
+
             </div>
         </main>
 
         <footer class="foot">
-            <p>Created by Shubh Kumar | 2026</p>
+            <p>Created by Shubh | Week 8 CSS Grid Assignment</p>
         </footer>
 
     </div>
