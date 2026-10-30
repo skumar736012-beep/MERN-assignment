@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 - Flexbox Navbar</title>
+    <title>Week 7 - Flexbox Layout</title>
 
     <style>
         * {
@@ -16,7 +16,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Question 7.1 - Flexbox Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -50,12 +49,32 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+
+        .banner {
+            height: 400px;
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .banner h1 {
+            color: darkblue;
+            font-size: 40px;
+        }
+
+        .banner p {
+            font-size: 18px;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Question 7.1 -->
     <nav class="navbar">
 
         <div class="logo">SHUBH</div>
@@ -65,11 +84,21 @@
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
-
             <button class="nav-button">Login</button>
         </div>
 
     </nav>
+
+
+    <section class="banner">
+
+        <h1>Welcome to My Portfolio</h1>
+
+        <p>I am Shubh Kumar, a B.Tech CSE Student.</p>
+
+        <button class="nav-button">Explore More</button>
+
+    </section>
 
 </body>
 </html>
