@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 - CSS Box Model</title>
+
+    <style>
+        /* 6.1 Box Sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 25px;
+        }
+
+        /* Box Model Card */
+        .card {
+            width: 350px;
+            background-color: lightblue;
+            padding: 25px;
+            border: 5px solid darkblue;
+            margin: 20px auto;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: darkblue;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model</h1>
+
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            My name is Shubh Kumar.
+            I am a B.Tech CSE student.
+            I am learning HTML and CSS.
+            This card demonstrates
+            padding, border and margin.
+        </p>
+    </div>
+
+</body>
+</html>
