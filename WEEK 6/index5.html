@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 - CSS Box Model</title>
+    <title>Week 6 - CSS Box Model and Cards</title>
 
     <style>
-        /* 6.1 Box Sizing */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -26,39 +25,82 @@
             margin-bottom: 25px;
         }
 
-        /* Box Model Card */
+        /* Question 6.1 */
         .card {
             width: 350px;
-            background-color: lightblue;
             padding: 25px;
             border: 5px solid darkblue;
             margin: 20px auto;
+            border-radius: 15px;
+            text-align: center;
         }
 
         .card h2 {
             margin-bottom: 15px;
-            color: darkblue;
         }
 
         .card p {
             line-height: 1.6;
+        }
+
+        /* Question 6.2 */
+        .profile-card {
+            width: 350px;
+            padding: 25px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid #333;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .blue-card {
+            background-color: lightblue;
+        }
+
+        .green-card {
+            background-color: lightgreen;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>CSS Box Model</h1>
+    <h1>CSS Box Model and Cards</h1>
 
+    <!-- Question 6.1 -->
     <div class="card">
         <h2>About Me</h2>
         <p>
-            My name is Shubh Kumar.
-            I am a B.Tech CSE student.
+            My name is Shubh Kumar. I am a B.Tech CSE student.
             I am learning HTML and CSS.
-            This card demonstrates
-            padding, border and margin.
         </p>
+    </div>
+
+    <!-- Question 6.2 -->
+    <div class="profile-card blue-card">
+        <div class="avatar">S</div>
+        <h2>Shubh Kumar</h2>
+        <p>B.Tech CSE Student</p>
+    </div>
+
+    <div class="profile-card green-card">
+        <div class="avatar">S</div>
+        <h2>Shubh Kumar</h2>
+        <p>Learning Web Development</p>
     </div>
 
 </body>
