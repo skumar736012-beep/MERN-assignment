@@ -16,13 +16,40 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            padding: 20px;
+            padding: 0 20px 100px;
+        }
+
+        /* Question 6.4 - Sticky Top Bar */
+        .top-bar {
+            position: sticky;
+            top: 0;
+            background-color: darkblue;
+            color: white;
+            padding: 18px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        /* Question 6.4 - Fixed Plus Button */
+        .plus-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            border: none;
+            border-radius: 50%;
+            background-color: darkblue;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1100;
         }
 
         h1 {
             text-align: center;
             color: darkblue;
-            margin-bottom: 25px;
+            margin: 25px 0;
         }
 
         /* Question 6.1 */
@@ -87,10 +114,21 @@
             overflow: auto;
             line-height: 1.6;
         }
+
+        .extra-content {
+            text-align: center;
+            margin: 30px auto;
+            line-height: 2;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Question 6.4 -->
+    <header class="top-bar">
+        <h2>My Portfolio</h2>
+    </header>
 
     <h1>CSS Practice - Week 6</h1>
 
@@ -136,6 +174,21 @@
             I believe in discipline, consistency and hard work.
         </p>
     </div>
+
+    <!-- Extra content to test sticky navigation -->
+    <div class="extra-content">
+        <h2>My Learning Journey</h2>
+        <p>Learning HTML and CSS</p>
+        <p>Practising Java programming</p>
+        <p>Exploring JavaScript</p>
+        <p>Improving problem-solving skills</p>
+        <p>Learning data structures</p>
+        <p>Building web development projects</p>
+        <p>Working towards my career goals</p>
+    </div>
+
+    <!-- Fixed Plus Button -->
+    <button class="plus-button">+</button>
 
 </body>
 </html>
