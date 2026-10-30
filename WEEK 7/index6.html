@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 - Flexbox Layout</title>
+    <title>Shubh Kumar - Portfolio</title>
 
     <style>
         * {
@@ -15,9 +15,10 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            color: #333;
         }
 
-    
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -54,15 +55,15 @@
 
     
         .banner {
-            height: 400px;
+            min-height: 400px;
             background-color: lightblue;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            gap: 15px;
-            padding: 20px;
+            gap: 18px;
+            padding: 30px;
         }
 
         .banner h1 {
@@ -73,7 +74,6 @@
         .banner p {
             font-size: 18px;
         }
-
 
         .cards-container {
             display: flex;
@@ -100,6 +100,20 @@
             line-height: 1.6;
         }
 
+
+        .section-title {
+            text-align: center;
+            color: darkblue;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -112,7 +126,7 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Services</a>
+            <a href="#">Skills</a>
             <a href="#">Contact</a>
             <button class="nav-button">Login</button>
         </div>
@@ -123,11 +137,16 @@
 
         <h1>Welcome to My Portfolio</h1>
 
-        <p>I am Shubh Kumar, a B.Tech CSE Student.</p>
+        <p>
+            I am Shubh Kumar, a B.Tech CSE student
+            interested in programming and technology.
+        </p>
 
         <button class="nav-button">Explore More</button>
 
     </section>
+
+    <h2 class="section-title">My Learning Skills</h2>
 
     <section class="cards-container">
 
@@ -147,6 +166,10 @@
         </div>
 
     </section>
+
+    <footer>
+        <p>Created by Shubh Kumar | My Portfolio 2026</p>
+    </footer>
 
 </body>
 </html>
