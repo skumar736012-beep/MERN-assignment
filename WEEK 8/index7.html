@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 8 - CSS Grid</title>
+    <title>Week 8 - CSS Grid Layout</title>
 
     <style>
         * {
@@ -21,43 +21,115 @@
         h1 {
             text-align: center;
             color: darkblue;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-    
+        /* Question 8.3 - Grid Template Areas */
+        .page-layout {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas:
+                "head head"
+                "side main"
+                "foot foot";
+            gap: 15px;
+        }
+
+        .head {
+            grid-area: head;
+            background-color: darkblue;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .side {
+            grid-area: side;
+            background-color: lightblue;
+            padding: 25px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: white;
+            padding: 25px;
+        }
+
+        .foot {
+            grid-area: foot;
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Question 8.1 and 8.2 - Responsive Grid */
         .grid-container {
             display: grid;
-
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-            gap: 20px;
-            padding: 20px;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .grid-box {
             background-color: lightblue;
             border: 2px solid darkblue;
             border-radius: 10px;
-            padding: 40px 20px;
+            padding: 30px 15px;
             text-align: center;
-            font-size: 20px;
             font-weight: bold;
+        }
+
+        @media screen and (max-width: 600px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "head"
+                    "side"
+                    "main"
+                    "foot";
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>My Responsive CSS Grid</h1>
+    <h1>My CSS Grid Layout</h1>
 
-    <div class="grid-container">
+    <!-- Question 8.3 -->
+    <div class="page-layout">
 
-        <div class="grid-box">Box 1</div>
-        <div class="grid-box">Box 2</div>
-        <div class="grid-box">Box 3</div>
-        <div class="grid-box">Box 4</div>
-        <div class="grid-box">Box 5</div>
-        <div class="grid-box">Box 6</div>
+        <header class="head">
+            <h2>My Portfolio Header</h2>
+        </header>
+
+        <aside class="side">
+            <h2>Sidebar</h2>
+            <p>Home</p>
+            <p>About</p>
+            <p>Skills</p>
+            <p>Contact</p>
+        </aside>
+
+        <main class="main">
+            <h2>Main Content</h2>
+            <p>Welcome to my responsive CSS Grid page.</p>
+
+            <!-- Questions 8.1 and 8.2 -->
+            <div class="grid-container">
+                <div class="grid-box">Box 1</div>
+                <div class="grid-box">Box 2</div>
+                <div class="grid-box">Box 3</div>
+                <div class="grid-box">Box 4</div>
+                <div class="grid-box">Box 5</div>
+                <div class="grid-box">Box 6</div>
+            </div>
+        </main>
+
+        <footer class="foot">
+            <p>Created by Shubh Kumar | 2026</p>
+        </footer>
 
     </div>
 
